@@ -50,8 +50,8 @@ export const Navbar = () => {
                     onChange={handleSearchChange}
                     className="search-input"
                 />
-                <img src={pencarian} alt="search" className="search-icon" />
             </div>
+            
             <div className='hamburger-menu' onClick={toggleSidebar}>
                 <AlignJustify/>
             </div>
