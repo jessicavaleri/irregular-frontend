@@ -8,7 +8,7 @@
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     margin: 20px;
     border-radius: 40px;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     position: relative;
 }
 
@@ -57,15 +57,23 @@
     margin-right: 20px;
 }
 
+.hamburger-menu {
+    display: none;
+}
+
 @media screen and (max-width: 768px) {
     .navbar {
-        flex-direction: column;
-        align-items: flex-start;
+        /* flex-direction: column; */
+        align-items: center;
         padding: 15px 20px;
     }
 
+    .hamburger-menu {
+        display: flex;
+    }
+
     .navbar-menu {
-        flex-direction: column;
+        /* flex-direction: column; */
         gap: 20px;
         position: static;
         transform: none;

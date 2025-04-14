@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import './Navbar.css';
 import logo from "../assets/logo.png";
 import pencarian from "../assets/pencarian.png";
+import MobileSidebar from './Sidebar';
+import {AlignJustify} from "lucide-react"
 
 export const Navbar = () => {
     const [searchTerm, setSearchTerm] = useState("");
@@ -12,9 +14,16 @@ export const Navbar = () => {
         console.log("Searching for:", e.target.value);
     };
 
+    const [isOpen, setIsOpen] = useState(false);
+
+    const toggleSidebar = () => {
+      setIsOpen(!isOpen);
+    };
+
     return (
+        <>
         <nav className='navbar'>
-            <div className='navbar-logo'>
+            <div className='navbar-logo' >
                 <img src={logo} alt="Logo Web" className="logo-web" />  
             </div>
 
@@ -43,6 +52,11 @@ export const Navbar = () => {
                 />
                 <img src={pencarian} alt="search" className="search-icon" />
             </div>
+            <div className='hamburger-menu' onClick={toggleSidebar}>
+                <AlignJustify/>
+            </div>
         </nav>
+        <MobileSidebar isOpen={isOpen} onClick={toggleSidebar} />
+        </>
     );
 };
