@@ -33,9 +33,7 @@ export const Product = () => {
             />
             <div class="text-product1">
               <h3>{product.name}</h3>
-              <li>Dijahit dengan 3 jarum</li>
-              <li>Bahan adem lembut keringat </li>
-              <li>Warna tidak mudah pudar</li>
+              <li>{product.description}</li>
             </div>
             <div class="harga">
               <h3>
